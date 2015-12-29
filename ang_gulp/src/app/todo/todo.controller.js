@@ -8,7 +8,20 @@
   /** @ngInject */
   function TodoController() {
     var vm = this;
-    vm.todos = [];
+    vm.todos = [
+      {
+        "description": "Test 1.",
+        "status": 0
+      },
+      {
+        "description": "Test 2.",
+        "status": 0
+      },
+      {
+        "description": "Test 3.",
+        "status": 1
+      }
+    ];
     vm.submitted = false;
     vm.addTodo = function(){
       var newTodo = {

@@ -14,14 +14,17 @@
             todoList: "=",
             statusType: "@"
         },
-        templateUrl: 'app/todo/list.html'
+        templateUrl: 'app/todo/list.html',
+        link: function(scope, elem, attrs){
+          var count = 0;
+          angular.forEach(scope.todoList, function (item) {
+              if (item.status === scope.statusType * 1) {
+                  count++;
+
+              }
+          });
+          scope.count = count;
+        }
     };
-    // return {
-    //   retrict: 'E',
-    //   link: function(scope, e, a){
-    //     scope.hello = "Hello"
-    //   },
-    //   templateUrl: 'app/todo/list.html'
-    // };
   }
 })();
