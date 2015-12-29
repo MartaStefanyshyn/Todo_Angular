@@ -6,4 +6,6 @@
         <li ng-repeat="t in todo.todos">{{t}}<button class="btn btn-danger" ng-click="todo.deleteTodo($index)">Delete</button></li>
     </ul>
   </div>
+
+   <todo-list-directive header="Waiting" status-type="0" todo-list="todo.todos"></todo-list-directive>
 </div>
