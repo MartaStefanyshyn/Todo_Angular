@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Sample Todo</h1>
+  <div>
+    <input type="text" ng-model="todo.title"><button class="btn btn-success" ng-click="todo.addTodo()">Add</button>
+    <ul>
+        <li ng-repeat="t in todo.todos">{{t}}<button class="btn btn-danger" ng-click="todo.deleteTodo($index)">Delete</button></li>
+    </ul>
+  </div>
+</div>

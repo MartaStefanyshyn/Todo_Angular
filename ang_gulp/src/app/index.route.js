@@ -13,6 +13,11 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      }).state('todolist', {
+        url: '/todo_list',
+        templateUrl: 'app/todo/todo.html',
+        controller: 'TodoController',
+        controllerAs: 'todo'
       });
 
     $urlRouterProvider.otherwise('/');
